@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2>Javascript addEventListener</h2>
+    <p>We are using addEventListener() method for adding number of functions on the same button.</p>
+    <button id="btn">Try it</button>
+    <p id="demo"></p>
+    <script>
+        var c=document.getElementById("btn");
+
+        c.addEventListener("mouseover",func1);
+        c.addEventListener("click",func2);
+        c.addEventListener("mouseout",func3);
+
+        function func1(){
+            document.getElementById("demo").innerHTML+="mouseover!<br>";
+        }
+        function func2() {
+            document.getElementById("demo").innerHTML += "Clicked!<br>";
+        }
+        function func3() {
+            document.getElementById("demo").innerHTML += "Moused out!<br>";
+        }
+    </script>
+</body>
+</html>
